@@ -1,0 +1,36 @@
+<!-- About Section  -->
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 about-description wow fadeInUp">
+        <h4>{{content.field_explore_title.0}}</h4>
+        {{content.field_explore_description.0}}
+      </div>
+      <div class="col-md-6 about-image">
+        <div class="row">
+          <div class="col-md-12 about-full-img-outer">
+            <div class="about-full-img wow fadeInUp" data-wow-delay="0.3s">
+              <span></span>
+              <img src="{{ file_url(content.field_explore_image['#items'].entity.uri.value) }}" alt="about-full-width-image" class="img-responsive">
+            </div>
+          </div>  
+          <div class="col-md-6 about-left-image-outer">
+            <div class="about-left-image wow fadeInUp" data-wow-delay="0.5s">
+              <img src="{{ file_url(content.field_explore_left_image['#items'].entity.uri.value) }}" alt="about-left-image" class="img-responsive">
+            </div>
+            <div class="explore-btn wow fadeInUp" data-wow-delay="0.9s">
+              <a href="{{ content.field_explore_us_btn[0]['#url']|render }}" class="btn btn-info">{{ content.field_explore_us_btn[0]['#title']|render }}</a>
+            </div>
+          </div>
+          <div class="col-md-6 about-right-image-outer">
+            <div class="about-right-image wow fadeInUp" data-wow-delay="0.7s">
+              <img src="{{ file_url(content.field_explore_right_image['#items'].entity.uri.value) }}" alt="about-left-image" class="img-responsive">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</section>
+<!-- End About Section  -->
+{{ content.field_explore_room_slider}}

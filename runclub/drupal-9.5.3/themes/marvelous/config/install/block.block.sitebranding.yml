@@ -1,0 +1,25 @@
+uuid: ee5224fc-9005-4673-9e1a-66244beb1030
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - marvelous
+_core:
+  default_config_hash: CKZlOeAOp37OPzU8N8gQBBMFhuRSwT_FLanqHlsuG4c
+id: sitebranding
+theme: marvelous
+region: logo
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: true
+visibility: {  }

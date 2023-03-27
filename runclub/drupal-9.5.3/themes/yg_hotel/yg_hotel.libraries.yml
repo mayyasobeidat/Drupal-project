@@ -1,0 +1,32 @@
+global-styling:
+  css:
+    base:
+      'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700': { type: external, minified: true }
+      'https://fonts.googleapis.com/css?family=Open+Sans:400,700,800': { type: external, minified: true }
+      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css': { type: external, minified: true }
+      css/bootstrap.min.css: {}
+      css/bootstrap-datetimepicker.min.css: {}
+      magnific-popup/magnific-popup.css: {}
+      css/carousel.css: {}
+      css/animate.css: {}      
+      css/style.css: {}
+      css/custom.css: {}
+      
+
+  js:
+    js/popper.js: {}
+    js/bootstrap.min.js: {}
+    js/superfish.min.js: {}
+    js/wow.min.js: {}
+    js/slick.min.js: {}
+    js/magnific-popup.min.js: {}
+    js/bootstrap-datetimepicker.min.js: {}
+    js/carousel.js: {}
+    js/scroll.js: {}
+    js/main.js: {}
+
+
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery

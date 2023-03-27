@@ -1,0 +1,15 @@
+<!-- facility section -->
+<section id="facilities" style="background-image: url('{{ file_url(content.field_provide_bg_image['#items'].entity.uri.value) }}'); width: 100%;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 mx-auto text-center wow fadeInUp" data-wow-delay="0.3s">
+        <h2>{{content.field_provide_title.0}}</h2>
+        <p>{{content.field_provide_tag.0}}</p>
+      </div>
+    </div>
+    <div class="row facility-lists">
+      {{content.field_paragraph_listing_items}}
+    </div>
+  </div>
+</section>
+<!-- End facility section -->

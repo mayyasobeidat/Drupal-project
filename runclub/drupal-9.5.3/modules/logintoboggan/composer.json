@@ -1,0 +1,16 @@
+{
+  "name": "drupal/logintoboggan",
+  "type": "drupal-module",
+  "description": "This module offers several modifications of the Drupal login system in an external module by offering the following features and usability improvements.",
+  "keywords": [
+    "Drupal"
+  ],
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "homepage": "",
+  "support": {
+    "issues": "",
+    "source": ""
+  },
+  "require": {}
+}

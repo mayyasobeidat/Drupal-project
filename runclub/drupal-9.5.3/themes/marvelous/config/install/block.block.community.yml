@@ -1,0 +1,25 @@
+uuid: 4ccd5261-4313-43ff-a775-3d6ff84d4c50
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.community
+  module:
+    - system
+  theme:
+    - marvelous
+id: community
+theme: marvelous
+region: footer_second
+weight: -2
+provider: null
+plugin: 'system_menu_block:community'
+settings:
+  id: 'system_menu_block:community'
+  label: Community
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

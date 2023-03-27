@@ -1,0 +1,25 @@
+name: marvelous
+type: theme
+description: 'A cuddly theme that offers extra marvelous.'
+core_version_requirement: ^8 || ^9
+libraries:
+  - marvelous/global-styling
+  - marvelous/vendor
+base theme: false
+regions:
+  header: 'Header'
+  navigation: 'Main Navigation'
+  slider: 'slider'
+  logo: 'Logo'
+  content: 'Content'
+  sidebar_first: 'Sidebar first'
+  footer_logo: 'Footer Logo'
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'
+
+# Information added by Drupal.org packaging script on 2022-10-13
+version: '1.0.x-dev'
+project: 'marvelous'
+datestamp: 1665667713

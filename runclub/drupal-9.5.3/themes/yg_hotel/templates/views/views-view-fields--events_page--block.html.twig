@@ -1,0 +1,29 @@
+
+        <div class="items wow fadeInUp">
+          <div class="events-listing">
+          <div class="row">
+            <div class="col-md-5 events-image">
+              <div class="listing-image hovereffect-events-img">
+               <a href="{{fields.view_node.content}}"><img src="{{ fields.field_events_image.content}}" alt="events-img" class="img-responsive"></a>
+                 <div class="Events-date events-overlay">
+                  <p><span>{{ fields.field_date.content}}</span><br>{{ fields.field_date_1.content}}</p>
+                 </div>
+               </div>
+            </div>
+            <div class="col-md-7 events-content">
+              <div class="events-description">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h6>{{fields.title.content}}</h6>
+                  </div>
+                  <div class="col-md-12 content">
+                    {{ fields.body.content }}<br>
+                  <i class="fa fa-clock-o"></i><span>{{ fields.field_event_timing.content}}</span>
+                  </div>
+                </div>  
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+

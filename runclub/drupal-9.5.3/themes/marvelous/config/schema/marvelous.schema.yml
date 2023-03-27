@@ -1,0 +1,6 @@
+# Required to validate default theme settings.
+
+marvelous.settings:
+  type: theme_settings
+  label: 'marvelous settings'
+

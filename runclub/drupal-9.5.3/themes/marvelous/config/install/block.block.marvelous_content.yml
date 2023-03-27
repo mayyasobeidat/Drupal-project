@@ -1,0 +1,22 @@
+uuid: 60503411-00c1-4bab-9a9a-8a6cf003c9be
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - marvelous
+_core:
+  default_config_hash: 71gtDaM2q3s4Fpqc3PaBZUPUazAEefx4qjHwZ8T9F90
+id: marvelous_content
+theme: marvelous
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

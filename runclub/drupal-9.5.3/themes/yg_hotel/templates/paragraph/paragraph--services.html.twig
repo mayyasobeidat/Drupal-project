@@ -1,0 +1,17 @@
+<!-- Our Services -->
+<section id="our-services" style="background-image: url('{{ file_url(content.field_services_image['#items'].entity.uri.value) }}'); background-repeat: no-repeat; width: 100%;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 our-services-left">
+        <div class="our-services-left-content ml-auto wow fadeInRight" data-wow-delay="0.3s">
+          {{content.field_services_title.0}}
+        </div>
+      </div>
+      <div class="col-md-6 enjoy-our-services wow fadeInLeft" data-wow-delay="0.6s">
+        <h4>{{content.field_service_sub_title.0}}</h4>
+        {{ content.field_services_description.0}}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Our Services -->

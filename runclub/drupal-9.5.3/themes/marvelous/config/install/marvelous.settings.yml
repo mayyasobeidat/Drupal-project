@@ -1,0 +1,81 @@
+_core:
+  default_config_hash: lmUR3b0WruJDwUlY9KXn_X9jhcJFA0NuBor-o25afvU
+favicon:
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  use_default: true
+show_header_color: 1
+header_color: '#F5F5DC'
+show_slide_num: 1
+slide_num: '5'
+slideshow: ''
+show_header_image: 1
+image: {  }
+show_content_color: 0
+Content_color: ''
+show_footer_color: 1
+footer_color: '#DEB887'
+show_footer_first_details: 1
+footer_image: {  }
+footer_text: 'marvelou infolab pvt.'
+footer_email: marvelous@gmail.com
+footer_phone: '9988776655'
+footer_address: 'Atuly It Park ,indore(M.P)'
+show_footer_fourth_details: 1
+footer_head: 'Subscribe Newsletters'
+footer_des: 'Get our latest news and ideas to your inbox'
+show_social_icon: 1
+facebook_url: facebook.com
+twitter_url: twitter.com
+instagram_url: instagram.com
+linkedin_url: linkedin.com
+footer_details: 1
+copyright_color: '#F9EBEB'
+footer_copyright: " copy right by ©marvelous \r\n"
+show_css_details: 1
+text_color: black
+font_Size: 16px
+link_color: white
+banner: 1
+hero_color: ''
+slide1_title: 'Welcome to marvelous theme'
+slide1_head: 'Build your website the best using marvelous theme'
+slide1_des: 'use marvelous theme make your website more attractive and responsive'
+slide1_url: '#'
+slide1_url_text: Link
+slide1_url_1: '#'
+slide1_url_text_1: 'mobile number'
+slide2_title: ' Nice to meet you / Pleased to meet you'
+slide2_head: 'Things work out best for those who make the best of'
+slide2_des: 'There is no chance, no destiny, no fate, that can hinder or control the firm resolve of a determined soul." --Ella Wheeler Wilco'
+slide2_url: '#'
+slide2_url_text: Link
+slide2_url_1: '#'
+slide2_url_text_1: 'mobile number'
+slide3_title: 'Welcome Greeting Message '
+slide3_head: 'To live a creative life, we must lose our fear of being wrong'
+slide3_des: 'Our greatest fear should not be of failure but of succeeding at things in life that don''t really matter." --Francis Chan'
+slide3_url: '#'
+slide3_url_text: Link
+slide3_url_1: '#'
+slide3_url_text_1: 'mobile number'
+slide4_title: ' Be The Guiding Light'
+slide4_head: 'If you are not willing to risk the usual you will have '
+slide4_des: '"You''ve got to get up every morning with determination if you''re going to go to bed with satisfaction." --George Lorimer'
+slide4_url: '#'
+slide4_url_text: Link
+slide4_url_1: '#'
+slide4_url_text_1: 'mobile number'
+slide5_title: ' Be The Guiding Light'
+slide5_head: 'Trust because you are willing to accept the risk, not because'
+slide5_des: 'A goal is not always meant to be reached; it often serves simply as something to aim at." -- Bruce Lee'
+slide5_url: '#'
+slide5_url_text: Link
+slide5_url_1: '#'
+slide5_url_text_1: 'mobile number'
+footer_deve_text: 'Developed By VIJAY SHARMA   https://www.drupal.org/u/vijay_sharma'

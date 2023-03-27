@@ -1,0 +1,8 @@
+uuid: b469217c-5914-46ed-ac12-994771b06ca5
+langcode: en
+status: true
+dependencies: {  }
+id: services
+label: Services
+description: Service
+locked: false

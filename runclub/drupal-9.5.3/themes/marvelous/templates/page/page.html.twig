@@ -1,0 +1,350 @@
+<!--***** Preloader Start *****  -->
+{# <div id="js-preloader" class="js-preloader">
+				    <div class="preloader-inner">
+				      <span class="dot"></span>
+				      <div class="dots">
+				        <span></span>
+				        <span></span>
+				        <span></span>
+				      </div>
+				    </div>
+				  </div> #}
+<!-- ***** Preloader End *****-->
+
+<!-- ***** Header Area Start ***** -->
+	<header class="header-area header-sticky wow slideInDown" id="header" data-wow-duration="0.75s" data-wow-delay="0s"> <div class="container">
+		{% if show_header_color %}
+			<style>
+				#header {
+					background-color: {{header_color}}
+					;
+				}
+			</style>
+		{% endif %}
+		{% if page.header %}
+			{{page.header}}
+		{% endif %}
+		<div class="row">
+			<div class="col-12">
+				<nav
+					class="main-nav">
+					<!-- ***** Logo Start ***** -->
+					{% if page.logo %}
+						{{page.logo}}
+					{% endif %}
+					<!-- ***** Logo End ***** -->
+					<!-- ***** Menu Start ***** -->
+					<ul class="nav">
+						{% if page.navigation %}
+							{{page.navigation}}
+						{% endif %}
+					</ul>
+					<a class='menu-trigger'>
+						<span>Menu</span>
+					</a>
+					<!-- ***** Menu End ***** -->
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- ***** Header Area End ***** -->
+
+<div class="main-banner" id="top">
+	{% if hero_color %}
+		<style>
+			#top {
+				background-color: {{hero_color}}
+				;
+			}
+		</style>
+	{% endif %}
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="row">
+					<div class="col-lg-6 align-self-center">
+						<div class="owl-carousel owl-banner">
+							{% if page.slider %}
+								{{page.slider}}
+							{% endif %}
+							{% if banner %}
+								{% for key, option in slide %}
+									<div class="item header-text">
+										{% if loop.first %}
+											{% if option.slide_title %}
+												<h6>{{ option.slide_title }}</h6>
+											{% endif %}
+											{% if option.slide_head %}
+												<h2>{{ option.slide_head }}</h2>
+											{% endif %}
+											{% if option.slide_des %}
+												<p>{{ option.slide_des }}</p>
+											{% endif %}
+											<div class="down-buttons">
+												<div class="main-blue-button-hover">
+													{% if option.slide_url_1 or option.slide_url_text_1 %}
+														<a class="button-link" href="{{ option.slide_url_1 }}">{{ option.slide_url_text_1 }}</a>
+													{% endif %}
+												</div>
+												<div class="call-button">
+
+													{% if option.slide_url_2 or option.slide_url_text_2 %}
+														<a class="button-link" href="{{ option.slide_url_2 }}">
+															<i class="fa fa-phone"></i>
+															<span>{{ option.slide_url_text_2 }}</span>
+														</a>
+													{% endif %}
+												</div>
+											</div>
+										</div>
+									{% else %}
+										{% if option.slide_title %}
+											<h6>{{ option.slide_title }}</h6>
+										{% endif %}
+										{% if option.slide_head %}
+											<h2>{{ option.slide_head }}</h2>
+										{% endif %}
+										{% if option.slide_des %}
+											<p>{{ option.slide_des }}</p>
+										{% endif %}
+										<div class="down-buttons">
+											<div class="main-blue-button-hover">
+												{% if option.slide_url_1 or option.slide_url_text_1 %}
+													<a class="button-link" href="{{ option.slide_url_1 }}">{{ option.slide_url_text_1 }}</a>
+												{% endif %}
+											</div>
+											<div class="call-button">
+												<i class="fa fa-phone"></i>
+												{% if option.slide_url_2 or option.slide_url_text_2 %}
+													<a class="button-link" href="{{ option.slide_url_2 }}">{{ option.slide_url_text_2 }}</a>
+												{% endif %}
+											</div>
+										</div>
+									</div>
+								{% endif %}
+							{% endfor %}
+						{% endif %}
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<div class="background-image">
+						{% if show_header_image %}
+						  {% if image %}
+							<style>
+								.main-banner:before {
+									background-image: url({{ image }})
+								}
+							</style>
+							{% else %} 
+							<div> hello </div>
+								<style>
+								.main-banner:before {
+									background-image: url({{ image }})
+								}
+							</style>
+							{% endif %}
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div>{% if show_css_details %}
+
+<style>
+	{% if text_color %}
+		.header-area .main-nav .nav li a,
+		.main-banner .item h2,
+		p,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		footer .footer-item h4 , footer .copyright p{
+			color: {{text_color}}
+			;
+		}
+	{% endif %}
+	{% if font_Size %}
+		.main-content p {
+			font-size: {{font_Size}}
+		}
+	{% endif %}
+	{% if link_color %}
+		a,
+		footer .about a,
+		footer .footer-item ul li a,
+		footer .footer-item p {
+			color: {{link_color}}
+		}
+	{% endif %}
+</style>{% endif %}<div class="main-content main-background">
+{% if page.content %}
+	{% if show_content_color %}
+		{% if Content_color %}
+			<style>
+				.main-content {
+					background-color: {{Content_color}}
+				}
+			</style>
+		{% endif %}
+	{% endif %}
+	{{page.content}}
+{% endif %}</div><div class="footer-dec">
+<img src="assets/images/footer-dec.png" alt=""></div><footer id="footer-color">
+{% if show_footer_color %}
+	<style>
+		#footer-color {
+			background-color: {{footer_color}}
+			;
+		}
+	</style>
+{% endif %}
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3">
+			<div class="about footer-item">
+			 {% if  footer_logo %}
+				  {{ page.footer_logo }}
+			 {% endif %}
+			{% if show_footer_first_details %}
+				<div class="logo">
+					<a href="#"><img src="{{ footer_image }}" alt="Footer logo"></a>
+				</div>
+					 {% if footer_first %}
+				  {{ page.footer_first }}
+			 {% endif %}
+				{% if footer_text %}
+					<span>
+						<h3>{{ footer_text }}</h3>
+					</span>
+				{% endif %}
+				<br>
+				{% if footer_email %}
+					<a href="#">{{ footer_email }}</a>
+				{% endif %}
+				<br>
+				{% if footer_phone %}
+					<a href="#">{{ footer_phone }}</a>
+				{% endif %}
+				<br>
+				{% if footer_address %}
+					<a href="#">{{ footer_address }}</a>
+				{% endif %}
+				<br>
+			{% endif %}
+			<ul>
+				{% if show_social_icon %}
+					{% if facebook_url %}
+						<li>
+							<a href="{{ facebook_url }}">
+								<i class="fa fa-facebook"></i>
+							</a>
+						</li>
+					{% endif %}
+					{% if twitter_url %}
+						<li>
+							<a href="{{ twitter_url }}">
+								<i class="fa fa-twitter"></i>
+							</a>
+						</li>
+					{% endif %}
+					{% if linkedin_url %}
+						<li>
+							<a href="{{ linkedin_url }}">
+								<i class="fa fa-linkedin"></i>
+							</a>
+						</li>
+					{% endif %}
+					{% if  instagram_url %}
+						<li>
+							<a href="{{ instagram_url }}">
+								<i class="fa fa-instagram"></i>
+							</a>
+						</li>
+					{% endif %}
+				{% endif %}
+
+			</ul>
+
+		</div>
+	</div>
+	<div class="col-lg-3">
+		<div class="services footer-item">
+			<ul>
+				 {% if footer_second %}
+				  {{ page.footer_second }}
+			 {% endif %}
+				{% if page.footer_second %}
+					{{ page.footer_second }}
+				{% endif %}
+			</ul>
+		</div>
+	</div>
+	<div class="col-lg-3">
+		<div class="community footer-item">
+
+			<ul>
+				 {% if  footer_third %}
+				  {{ page.footer_third }}
+			 {% endif %}
+				{% if page.footer_third %}
+					{{ page.footer_third }}
+				{% endif %}
+			</ul>
+		</div>
+	</div>
+	<div class="col-lg-3">
+		<div class="subscribe-newsletters footer-item">
+			 {% if footer_fourth %}
+				  {{ page.footer_fourth }}
+			 {% endif %}
+			{% if show_footer_fourth_details %}
+				{% if footer_head %}
+					<h4>{{ footer_head }}</h4>
+				{% endif %}
+				{% if footer_des %}
+					<p>{{ footer_des }}</p>
+				{% endif %}
+			{% endif %}
+			<form action="#" method="get">
+				<input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+				<button type="submit" id="form-submit" class="main-button ">
+					<i class="fa fa-paper-plane-o"></i>
+				</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="col-lg-12">
+		<div class="copyright" style="background-color:{{ copyright_color }}">
+			{% if footer_details %}
+				{% if footer_copyright %}
+					<p>
+
+						{{ footer_copyright }}
+
+					</p>
+                    
+                    
+                    
+				{% endif %}
+                <br>
+                {% if footer_text %}
+					<p>
+
+						{{ footer_deve_text }}
+
+					</p>
+                    <br>
+                    
+                    
+				{% endif %}
+			{% endif %}
+		</div>
+	</div>
+</div></div></footer>

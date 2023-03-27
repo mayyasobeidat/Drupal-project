@@ -1,0 +1,5 @@
+logintobogganform.settings:
+  title: 'LoginToboggan'
+  route_name: logintobogganform.settings
+  description: 'Set up custom login options like instant login, login redirects, pre-authorized validation roles, etc.'
+  parent: user.admin_index

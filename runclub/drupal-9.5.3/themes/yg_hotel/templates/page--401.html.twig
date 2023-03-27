@@ -1,0 +1,108 @@
+<header id="header" class="other-page-header">
+  <div id="header-top">
+    <div class="container">
+      <div class="header-right">
+        <ul>
+          <li>{{reachus}}<a class="phone" href="tel:123 456 7890"><span>{{phone}}</span></a></li>
+          {% if (facebook or twitter or youtube) %}
+          <li>{{followus}}
+          {% if facebook  %}
+          <a href="{{facebook}}" class="social" ><i class="fa fa-facebook-f"></i></a>
+          {% endif %}
+
+          {% if facebook  %}
+          <a href="{{twitter}}" class="social" ><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          {% endif %}
+          {% if facebook  %}
+          <a href="{{youtube}}" class="social" ><i class="fa fa-youtube-play"></i></a>
+          {% endif %}
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" id="mainNav">
+    <div class="container"> <a href="{{ path('<front>') }}" class="logo"><img src="{{ logopath }}" alt="logo"></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"  aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <i class="fa fa-bars"></i> </button>
+        {{ page.primary_menu }}
+      </div>
+    </div>
+  </nav>
+</header>
+
+ <section {{ content_attributes.addClass(content_classes) }}>
+
+        {# Content #}
+        {% block content %}
+          <a id="main-content"></a>
+          {{ page.content }}
+        {% endblock %}
+</section>
+
+
+
+<!-- FOOTER SECTION-->
+    <section id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-12 footer-columns wow fadeInUp" data-wow-delay="0.3s">
+            {{ page.footer_col_1}}
+          </div>
+          {% if (footerphone or fax or mail) %}
+          <div class="col-md-3 col-sm-12 footer-columns wow fadeInUp" data-wow-delay="0.6s">
+          <h6>{{getintitle}}</h6>
+
+            {% if footerphone  %}
+            <p><a href="tel:123 456 7890"><i class="fa fa-phone"></i>{{footerphone}}</a></p>
+            {% endif %}
+
+            {% if fax  %}
+            <p><a href="#"><i class="fa fa-fax"></i>{{fax}}</a></p>
+            {% endif %}
+
+            {% if mail  %}
+            <p><a href="mailto:{{mail}}"><i class="fa fa-envelope"></i>{{mail}}</a></p>
+            {% endif %}
+          </div>
+          {% endif %}
+          <div class="col-md-2 col-sm-12 footer-columns wow fadeInUp" data-wow-delay="0.6s">
+          {{ page.footer_col_3 }}
+          </div>
+
+          {% if (facebook or twitter or linkedin) %}
+          <div class="col-md-3 col-sm-12 footer-columns wow fadeInUp" data-wow-delay="0.9s">
+          <h6>SOCIAL</h6>
+            <div class="social">
+              <ul>
+              {% if facebook  %}
+               <li><a href="{{facebook}}" class="facebook"><i class="fa fa-facebook"></i> Facebook</a></li>
+              {% endif %}
+
+              {% if twitter  %}
+               <li><a href="{{twitter}}" class="twitter"><i class="fa fa-twitter"></i> Twitter</a></li>
+              {% endif %}
+               
+              {% if linkedin  %}
+               <li><a href="{{linkedin}}" class="linkedin"><i class="  fa fa-linkedin"></i> Linkedin</a></li>
+              {% endif %} 
+              </ul>  
+            </div>
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+    </section>
+    <div class="copyright">
+     <div class="container">
+     <div class="row">  
+      <div class="col-md-6 mx-auto text-center wow fadeInUp" data-wow-delay="0.3s"> 
+        <p>Theme By<a href="https://www.drupaldevelopersstudio.com/"> Drupal Developers Studio</a>, A Division of <a href="https://www.youngglobes.com/">Young Globes</a></p>  
+      </div>
+     </div>
+     </div>
+  </div>
+<!-- End footer section -->
+
+

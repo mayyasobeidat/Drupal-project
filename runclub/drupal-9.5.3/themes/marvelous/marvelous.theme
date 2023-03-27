@@ -1,0 +1,97 @@
+<?php
+
+/**
+ * @file
+ * Implements().
+ */
+
+use Drupal\file\Entity\File;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements theme_preprocess_page().
+ */
+function marvelous_preprocess_page(&$variables) {
+  $slider = [];
+  $num = theme_get_setting('slide_num');
+  for ($i = 1; $i <= $num; $i++) {
+    $slider[$i] = [
+      'slide_title' => theme_get_setting('slide' . $i . '_title'),
+      'slide_head' => theme_get_setting('slide' . $i . '_head'),
+      'slide_des' => theme_get_setting('slide' . $i . '_des'),
+      'slide_url_1' => theme_get_setting('slide' . $i . '_url'),
+      'slide_url_text_1' => theme_get_setting('slide' . $i . '_url_text'),
+      'slide_url_2' => theme_get_setting('slide' . $i . '_url_1'),
+      'slide_url_text_2' => theme_get_setting('slide' . $i . '_url_text_1'),
+    ];
+  }
+  $variables['slide'] = $slider;
+  $variables['banner'] = theme_get_setting('banner');
+  // Header color variable.
+  $variables['show_header_color'] = theme_get_setting('show_header_color');
+  $variables['header_color'] = theme_get_setting('header_color');
+  // Hero image variables.
+  $fid = theme_get_setting("image", "marvelous");
+  if (!empty($fid)) {
+    $file = File::load($fid[0]);
+    $uri = $file->getFileUri();
+    $image_path = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+  }
+  else {
+    $image_path = base_path() . $variables['directory'] . '/images/bg-2.jpg';
+  }
+  $variables['image'] = $image_path;
+  $variables['show_header_image'] = theme_get_setting('show_header_image');
+  $variables['hero_color'] = theme_get_setting('hero_color');
+  // Social media link variables.
+  $variables['show_social_icon'] = theme_get_setting('show_social_icon');
+  $variables['facebook_url'] = theme_get_setting('facebook_url');
+  $variables['twitter_url'] = theme_get_setting('twitter_url');
+  $variables['instagram_url'] = theme_get_setting('instagram_url');
+  $variables['linkedin_url'] = theme_get_setting('linkedin_url');
+  // Footer color variable.
+  $variables['show_footer_color'] = theme_get_setting('show_footer_color');
+  $variables['footer_color'] = theme_get_setting('footer_color');
+  // Footer first variables.
+  $fid = theme_get_setting("footer_image", "marvelous");
+  if (!empty($fid)) {
+    $file = File::load($fid[0]);
+    $uri = $file->getFileUri();
+    $image_path = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+  }
+  else {
+    $image_path = base_path() . $variables['directory'] . '/images/logo-marvalous.png';
+  }
+  $variables['show_footer_first_details'] = theme_get_setting('show_footer_first_details');
+  $variables['footer_image'] = $image_path;
+  $variables['footer_text'] = theme_get_setting('footer_text');
+  $variables['footer_email'] = theme_get_setting('footer_email');
+  $variables['footer_phone'] = theme_get_setting('footer_phone');
+  $variables['footer_address'] = theme_get_setting('footer_address');
+  // Footer fourth variables.
+  $variables['show_footer_fourth_details'] = theme_get_setting('show_footer_fourth_details');
+  $variables['footer_head'] = theme_get_setting('footer_head');
+  $variables['footer_des'] = theme_get_setting('footer_des');
+  // Footer copyright variables.
+  $variables['footer_copyright'] = theme_get_setting('footer_copyright');
+  $variables['footer_details'] = theme_get_setting('footer_details');
+  $variables['copyright_color']  = theme_get_setting('copyright_color');
+  $variables['Content_color'] = theme_get_setting('Content_color');
+  $variables['footer_deve_text'] = theme_get_setting('footer_deve_text');
+  
+  // Css style.
+  $variables['show_css_details'] = theme_get_setting('show_css_details');
+  $variables['text_color'] = theme_get_setting('text_color');
+  $variables['font_Size'] = theme_get_setting('font_Size');
+  $variables['link_color'] = theme_get_setting('link_color');
+
+
+
+}
+  /**
+   * marvelous settings form submit.
+   */
+  function marvelous_settings_form_submit(&$form, FormStateInterface $form_state) {
+    $account = \Drupal::currentUser();
+    $values = $form_state->getValues();
+  }

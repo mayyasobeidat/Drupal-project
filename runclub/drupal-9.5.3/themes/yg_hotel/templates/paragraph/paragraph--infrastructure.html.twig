@@ -1,0 +1,39 @@
+<!-- Infrastructure section -->
+<section id="infrastructure">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 infrastructure-listing wow fadeInUp" data-wow-delay="0.3s">
+        <div class="infrastructure-listing-inner">
+          <div class="infrastructure-main-desc">
+            <h4>{{ content.field_infrastructure_con.0 }}</h4>
+          </div>
+          <div class="infrastructure-img">
+            <img src="{{ file_url(content.field_infrastructure_image['#items'].entity.uri.value) }}" class="img-responsive" alt="infrastructure-img">
+          </div>
+        </div>  
+      </div>
+      <div class="col-md-4 infrastructure-listing wow fadeInUp" data-wow-delay="0.6s">
+        <div class="infrastructure-listing-inner">
+          <div class="infrastructure-desc">
+            <p>{{ content.field_infrastructure_desc_first.0 }}</p>
+          </div>
+          <div class="infrastructure-main-desc">
+            <h4>{{ content.field_infrastructure_content2.0 }}</h4>
+          </div>
+        </div>  
+      </div>
+      <div class="col-md-4 infrastructure-listing wow fadeInUp" data-wow-delay="0.9s">
+        <div class="infrastructure-listing-inner">
+          <div class="infrastructure-desc">
+            <p>{{ content.field_infrastructure_desc_seco.0 }}</p>
+          </div>
+          <div class="infrastructure-desc">
+            <p>{{ content.field_infrastructure_desc_third.0 }}</p>
+          </div>
+        </div>  
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End Infrastructure section -->

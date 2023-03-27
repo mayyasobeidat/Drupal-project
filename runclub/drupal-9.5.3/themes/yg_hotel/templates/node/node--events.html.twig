@@ -1,0 +1,35 @@
+{{ content.field_detail_page_banner.0 }}
+<!-- End Top Banner section -->
+<section id="events-page" class="events-detail">
+    <div class="container">
+      <div class="items wow fadeInUp">
+          <div class="events-listing">
+          <div class="row">
+            <div class="col-md-12 events-image wow fadeInUp" data-wow-delay="0.3s">
+              <div class="listing-image">
+               <img src="{{content.field_events_image.0}}" alt="events-img" class="img-responsive">
+                 <div class="Events-date">
+                  <p><span>{{ node.field_date.value|date('U')|format_date('event_date') }}</span><br>{{ node.field_date.value|date('U')|format_date('event_month') }}</p>
+                 </div>
+               </div>
+            </div>
+            <div class="col-md-12 events-content wow fadeInUp" data-wow-delay="0.6s">
+              <div class="events-description">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h6>{{label}}</h6>
+                  <i class="fa fa-clock-o"></i><span>{{content.field_event_timing.0}}</span>
+                  </div>
+                  <div class="col-md-12 content">
+                    {{content.body.0}}
+                  </div>
+                </div>  
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+    </div> 
+</section> 
+
+{{ content.field_upcoming_evnents.0 }}

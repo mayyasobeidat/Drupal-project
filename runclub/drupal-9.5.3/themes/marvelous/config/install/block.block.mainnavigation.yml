@@ -1,0 +1,27 @@
+uuid: 6cc100cb-e544-4afa-a520-15a760fb6773
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - marvelous
+_core:
+  default_config_hash: 1RAkGbFZwY3UQZVe99G-xUwIu52K83lgO3qbzEuNolQ
+id: mainnavigation
+theme: marvelous
+region: navigation
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
