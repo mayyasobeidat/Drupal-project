@@ -1,0 +1,30 @@
+base_bootstrap_4.xs:
+  label: extra-small
+  mediaQuery: '@media (max-width: 575px)'
+  weight: 0
+  multipliers:
+    - 1x
+base_bootstrap_4.sm:
+  label: small
+  mediaQuery: '@media (min-width: 576px) and (max-width: 767px)'
+  weight: 1
+  multipliers:
+    - 1x
+base_bootstrap_4.md:
+  label: medium
+  mediaQuery: '@media (min-width: 768px) and (max-width: 991px)'
+  weight: 2
+  multipliers:
+    - 1x
+base_bootstrap_4.lg:
+  label: large
+  mediaQuery: '@media (min-width: 992px) and (max-width: 1199px)'
+  weight: 3
+  multipliers:
+    - 1x
+base_bootstrap_4.xl:
+  label: extra-large
+  mediaQuery: '@media (min-width: 1200px)'
+  weight: 4
+  multipliers:
+    - 1x

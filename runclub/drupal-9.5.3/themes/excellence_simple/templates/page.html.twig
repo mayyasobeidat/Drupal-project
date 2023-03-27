@@ -1,0 +1,217 @@
+<div id="toTop"><span class="glyphicon glyphicon-chevron-up"></span></div>
+<header id="navbar" role="banner" class="navbar navbar-static-top navbar-inverse container-fluid">
+  <div class="container">
+    <div class="navbar-header">
+      {% if logo %}
+      <a class="logo navbar-btn pull-left" href="{{ path('<front>') }}" title="{{ 'Home'|t }}">
+        <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+      </a>
+      {% endif %}
+
+      {% if site_name %}
+	  <div class="site-branding-name">
+	    <a class="name navbar-brand" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>7
+	  </div>
+      {% endif %}
+	  {% if site_slogan %}
+	  <div class="site-branding-slogan">
+        <div class="site-branding__slogan">{{ site_slogan }}</div>
+	  </div>
+      {% endif %}
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+      <div class="navbar-collapse collapse" id="page-template">
+        <nav role="navigation">
+            {% if page.navigation %}
+            {{ page.navigation }}
+            {% else %}
+            {% if main_menu %}
+            {{ main_menu }}
+            {% endif %}
+            {% endif %}
+        </nav>
+      </div>
+  </div>
+</header>
+{% if page.header_top_left or page.header_top_right %}
+<div id="header-top" class="masthead clearfix">
+  <div class="container">
+    <div id="header-top-inside" class="clearfix">
+      <div class="row">
+        {% if page.header_top_left %}
+        <div class="{{header_top_left_grid_class}}">
+          <div id="header-top-left" class="clearfix">
+            {{ page.header_top_left }}
+          </div>
+        </div>
+        {% endif %}
+        {% if page.header_top_right %}
+        <div class="{{header_top_right_grid_class}}">
+          <div id="header-top-right" class="clearfix">
+            {{ page.header_top_right }}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% if page.header %}
+<header id="header" role="banner" class="masthead clearfix">
+  <div class="container">
+    <div id="header-inside" class="clearfix">
+      <div class="row">
+        <div class="col-md-12">
+          {{ page.header }}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endif %}
+{% if page.banner %}
+<div id="banner" class="clearfix">
+  <div class="container">
+    <div id="banner-inside" class="clearfix">
+      <div class="row">
+        <div class="col-md-12">
+          {{ page.banner }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+<div id="page" class="clearfix">
+  {% if page.highlighted %}
+  <div id="top-content" class="clearfix">
+    <div class="container">
+      <div id="top-content-inside" class="clearfix">
+        <div class="row">
+          <div class="col-md-12">
+            {{ page.highlighted }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  <div id="main-content">
+    <div class="container">
+      <div class="row inner-content">
+        {% if page.sidebar_first %}
+        <aside class="{{sidebar_grid_class}}">
+          <section id="sidebar-first" class="sidebar clearfix">
+            {{ page.sidebar_first }}
+          </section>
+        </aside>
+        {% endif %}
+        <section class="{{main_grid_class}}">
+          <div id="main" class="clearfix">
+            <div id="breadcrumb" class="clearfix">
+              <div id="breadcrumb-inside" class="clearfix">
+                {{ breadcrumb }}
+              </div>
+            </div>
+            {% if page.promoted %}
+            <div id="promoted" class="clearfix">
+              <div id="promoted-inside" class="clearfix">
+                {{ page.promoted }}
+              </div>
+            </div>
+            {% endif %}
+            <div id="content-wrapper">
+              {% if page.content %}
+              {{ page.content }}
+              {% endif %}
+            </div>
+          </div>
+        </section>
+        {% if page.sidebar_second %}
+        <aside class="{{sidebar_grid_class}}">
+          <section id="sidebar-second" class="sidebar clearfix">
+            {{ page.sidebar_second }}
+          </section>
+        </aside>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% if page.bottom_content %}
+  <div id="bottom-content" class="clearfix">
+    <div class="container">
+      <div id="bottom-content-inside" class="clearfix">
+        <div class="row">
+          <div class="col-md-12">
+            {{ page.bottom_content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>
+{% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
+<footer id="footer" class="clearfix">
+  <div class="container">
+    <div id="footer-inside" class="clearfix">
+      <div class="row">
+        <div class="col-md-3">
+          {% if page.footer_first %}
+          <div class="footer-area">
+            {{ page.footer_first }}
+          </div>
+          {% endif %}
+        </div>
+        <div class="col-md-3">
+          {% if page.footer_second %}
+          <div class="footer-area">
+            {{ page.footer_second }}
+          </div>
+          {% endif %}
+        </div>
+        <div class="col-md-3">
+          {% if page.footer_third %}
+          <div class="footer-area">
+            {{ page.footer_third }}
+          </div>
+          {% endif %}
+        </div>
+        <div class="col-md-3">
+          {% if page.footer_fourth %}
+          <div class="footer-area">
+            {{ page.footer_fourth }}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+{% endif %}
+<footer id="subfooter" class="clearfix">
+  <div class="container">
+    <div id="subfooter-inside" class="clearfix">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="subfooter-area">
+            {% if secondary_menu %}
+            <nav id="secondary-menu" class="navigation" role="navigation">
+              {{ secondary_menu }}
+            </nav>
+            {% endif %}                    
+            {% if page.footer %}
+            {{ page.footer }}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

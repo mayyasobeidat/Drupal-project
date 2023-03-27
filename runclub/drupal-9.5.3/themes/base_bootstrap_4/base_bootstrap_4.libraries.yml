@@ -1,0 +1,9 @@
+bootstrap:
+  css:
+    theme:
+      dist/css/styles.min.css: { minified: true }
+  js:
+    dist/lib/popper.js/dist/umd/popper.min.js: { minified: true }
+    dist/lib/bootstrap/dist/js/bootstrap.min.js: { minified: true }
+  dependencies:
+    - core/jquery

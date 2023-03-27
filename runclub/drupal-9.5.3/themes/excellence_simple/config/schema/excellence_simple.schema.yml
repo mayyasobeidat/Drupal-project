@@ -1,0 +1,5 @@
+# Schema for the configuration files of the News+ Lite theme.
+
+excellence_simple.settings:
+  type: theme_settings
+  label: 'Excellence Simple settings'

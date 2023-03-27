@@ -1,0 +1,55 @@
+{
+  "name": "@drupal/base_bootstrap_4",
+  "version": "3.0.1",
+  "description": "A Drupal 8 base-theme implementing Bootstrap 4.",
+  "private": true,
+  "scripts": {
+    "init": "composer install && (npm ci || npm install)",
+    "commit": "npx git cz",
+    "release": "git add dist/. && standard-version -a",
+    "prerelease": "npm run build",
+    "build": "npx gulp build",
+    "watch": "npx gulp watch",
+    "lint:styles": "npx stylelint '**/*.{scss,sass}'",
+    "lint:styles:fix": "npm run lint:styles -- --fix",
+    "lint:scripts": "npx eslint --ext .js .",
+    "lint:scripts:fix": "npm run lint:scripts -- --fix",
+    "lint:php": "bin/phpcs --extensions=php,module,inc,install,test,profile,theme --ignore=bin/*,config/*,node_modules/*,vendor/*,*.md --standard=Drupal,DrupalPractice ./",
+    "lint:php:fix": "bin/phpcbf --extensions=php,module,inc,install,test,profile,theme --ignore=bin/*,config/*,node_modules/*,vendor/*,*.md --standard=Drupal,DrupalPractice ./",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.drupalcode.org/project/base_bootstrap_4.git"
+  },
+  "author": "Coldfron Labs Inc.",
+  "license": "GPL-2.0-or-later",
+  "dependencies": {
+    "bootstrap": "^4.6.1",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "@coldfrontlabs/gulp-templates": "^5.0.0",
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.27.0",
+    "eslint-plugin-drupal-contrib": "^1.1.0",
+    "gulp": "^4.0.2",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "postcss": "^8.4.4",
+    "prettier": "^2.5.1",
+    "standard-version": "^9.3.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-coldfront": "^2.0.3",
+    "yargs": "^17.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "resolutions": {}
+}

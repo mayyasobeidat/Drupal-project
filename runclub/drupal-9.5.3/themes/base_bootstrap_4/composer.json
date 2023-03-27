@@ -1,0 +1,50 @@
+{
+    "name": "drupal/base_bootstrap_4",
+    "type": "drupal-theme",
+    "description": "A Drupal 8 base-theme implementing Bootstrap 4.",
+    "keywords": [
+        "Drupal"
+    ],
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/base_bootstrap_4",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://git.drupalcode.org/project/base_bootstrap_4/issues",
+        "source": "https://git.drupalcode.org/project/base_bootstrap_4.git"
+    },
+    "authors": [
+        {
+            "name": "Coldfront Labs Inc.",
+            "role": "Developer"
+        }
+    ],
+    "repositories": {
+        "0": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "1": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "composer/composer": "^1.3",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+        "drupal/coder": "^8.3",
+        "phpcompatibility/php-compatibility": "*"
+    },
+    "config": {
+        "bin-dir": "bin/",
+        "sort-packages": true
+    },
+    "scripts": {
+        "test:phpcompatibility": [
+            "phpcs --ignore='**/core/*,**/testing/*,**/test/*,**/node_modules/*,**/vendor/*,**/bin/*,*.md' --extensions=php,module,inc,install,test,profile,theme --standard=PHPCompatibility -p --runtime-set testVersion 7.2- ./"
+        ]
+    },
+    "archive": {
+      "exclude": ["/.husky", "/scss", "/.*.js", "/.browserslistrc", "/.editorconfig", "/.eslintignore", "/.stylelintignore", "/.gitignore", "/gulpfile.js"]
+    }
+}

@@ -1,0 +1,70 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a facets item list.
+ *
+ * Available variables:
+ * - items: A list of items. Each item contains:
+ *   - attributes: HTML attributes to be applied to each list item.
+ *   - value: The content of the list element.
+ * - title: The title of the list.
+ * - list_type: The tag for list element ("ul" or "ol").
+ * - wrapper_attributes: HTML attributes to be applied to the list wrapper.
+ * - attributes: HTML attributes to be applied to the list.
+ * - empty: A message to display when there are no items. Allowed value is a
+ *   string or render array.
+ * - context: A list of contextual data associated with the list. May contain:
+ *   - list_style: The ID of the widget plugin this facet uses.
+ * - facet: The facet for this result item.
+ *   - id: the machine name for the facet.
+ *   - label: The facet label.
+ *
+ * @see facets_preprocess_facets_item_list()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set link_classes = [
+    'd-flex',
+    'list-group-item',
+    'list-group-item-action',
+    'justify-content-between',
+    'align-items-center'
+  ]
+%}
+{%
+  set facet_classes = [
+    'facets',
+    'facets-widget',
+    facet.widget.type ? "facets-widget-#{facet.widget.type}"
+  ]
+%}
+
+<div class="{{ facet_classes|join(" ") }}">
+  {% if facet.widget.type %}
+    {% set attributes = attributes.addClass('list-group') %}
+  {% endif %}
+  {% if items or empty %}
+    {% if title is not empty %}
+      <h3>{{ title }}</h3>
+    {% endif %}
+
+    {% if items %}
+      <div{{attributes}}>
+        {% for item in items %}
+          {% set link_classes = item.value['#title']['#is_active'] ? link_classes|merge(['active']) : link_classes %}
+          {{ link(item.value['#title'], item.value['#url'], { 'class': link_classes}) }}
+        {% endfor %}
+      </div>
+    {% else %}
+      {{ empty }}
+    {% endif %}
+  {% endif %}
+
+  {% if facet.widget.type == "dropdown" %}
+    <label id="facet_{{ facet.id }}_label">{{ 'Facet'|t }}
+      {{ facet.label }}
+    </label>
+  {% endif %}
+</div>

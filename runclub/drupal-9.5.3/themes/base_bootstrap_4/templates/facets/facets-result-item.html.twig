@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Default theme implementation of a facet result item.
+ *
+ * Available variables:
+ * - value: The item value.
+ * - raw_value: The raw item value.
+ * - show_count: If this facet provides count.
+ * - count: The amount of results.
+ * - is_active: The item is active.
+ * - facet: The facet for this result item.
+ *   - id: the machine name for the facet.
+ *   - label: The facet label.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set facet_classes = [
+    'facet',
+    'facet-item',
+    'badge',
+    'badge-light'
+  ]
+%}
+
+{{ value }}
+{% if is_active %}
+  <span class="{{ facet_classes|join(" ") }} facet-item__status js-facet-deactivate" aria-label="{{ 'remove facet'|t }}">x</span>
+{% endif %}
+{% if not is_active and show_count %}
+  <span class="{{ facet_classes|join(" ") }} facet-item__count">{{ count }}
+    <span class="sr-only">{{ 'matches'|t }}</span>
+  </span>
+{% endif %}

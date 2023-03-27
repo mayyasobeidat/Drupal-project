@@ -1,0 +1,9 @@
+/.husky export-ignore
+/scss export-ignore
+/.*.js export-ignore
+/.browserslistrc export-ignore
+/.editorconfig export-ignore
+/.eslintignore export-ignore
+/.stylelintignore export-ignore
+/.gitignore export-ignore
+/gulpfile.js export-ignore

@@ -1,0 +1,23 @@
+name: Base Bootstrap 4
+type: theme
+base theme: classy
+description: A Drupal 8 base-theme implementing Bootstrap 4.
+package: Bootstrap
+core: 8.x
+core_version_requirement: ^8 || ^9
+regions:
+  branding: Branding
+  navigation: Navigation
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  footer: Footer
+  page_top: Page top
+  page_bottom: Page bottom
+libraries:
+  - base_bootstrap_4/bootstrap
+
+# Information added by Drupal.org packaging script on 2021-12-07
+version: '3.0.1'
+project: 'base_bootstrap_4'
+datestamp: 1638897801

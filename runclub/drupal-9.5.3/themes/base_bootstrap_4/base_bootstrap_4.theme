@@ -1,0 +1,87 @@
+<?php
+
+/**
+ * @file
+ * The base_bootstrap_4 theme file.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function base_bootstrap_4_preprocess_menu_local_task(&$variables) {
+  // Add appropriate class to links in the navigation.
+  $variables['link']['#attributes']['class'][] = 'nav-link';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function base_bootstrap_4_preprocess_form_element(&$variables) {
+  // Add the default form-group class to the element.
+  $variables['attributes']['class'][] = 'form-group';
+
+  switch ($variables['type']) {
+    // If checkbox/radio add appropriate classes to the element and label.
+    case 'checkbox':
+    case 'radio':
+      $variables['label']['#attributes']['class'][] = 'form-check-label';
+      $variables['attributes']['class'][] = 'form-check';
+
+      break;
+
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function base_bootstrap_4_preprocess_input(&$variables) {
+  // Add the appropriate classes to the different input types.
+  switch ($variables['attributes']['type']) {
+    case 'button':
+    case 'submit':
+      $classes = [
+        'btn',
+        'btn-primary',
+      ];
+
+      $variables['attributes']['class'] = array_merge($variables['attributes']['class'], $classes);
+
+      break;
+
+    case 'checkbox':
+    case 'radio':
+      $variables['attributes']['class'][] = 'form-check-input';
+
+      break;
+
+    case 'file':
+      $variables['attributes']['class'][] = 'form-control-file';
+
+      break;
+
+    case 'range':
+      $variables['attributes']['class'][] = 'form-control-range';
+
+      break;
+
+    default:
+      $variables['attributes']['class'][] = 'form-control';
+
+      break;
+
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function base_bootstrap_4_preprocess_image(&$variables) {
+  // Apply img-fluid to all images.
+  if (empty($variables['attributes']['class'])) {
+    $variables['attributes']['class'] = [];
+  }
+  if (is_array($variables['attributes']['class'])) {
+    $variables['attributes']['class'][] = 'img-fluid';
+  }
+}
